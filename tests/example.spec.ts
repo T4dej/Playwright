@@ -14,7 +14,7 @@ test("has title", async ({ page }) => {
   console.log("secondTimeout:", secondTimeout);
   await page.waitForTimeout(secondTimeout);
 
-  await page.click('//li//label[contains(text(),"ALJAŽ")]');
+  await page.click('//li//label[contains(text(),"ALJAŽ RAMOT")]');
 
   const thirdTimeout = randomTimeout();
   console.log("thirdTimeout:", thirdTimeout);
