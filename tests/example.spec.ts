@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { randomTimeout } from "../Helpers/helpers";
 
-test("has title", async ({ page }) => {
+test("Oddaj glas", async ({ page }) => {
   await page.goto("https://www.radioprlek.net/");
 
   const firstTimouet = randomTimeout();
@@ -23,6 +23,6 @@ test("has title", async ({ page }) => {
   await page.click('//a[contains(text(),"Vote")]');
 
   await expect(
-    page.locator('//div[contains(text(),"Obljubim ti")]')
+    page.locator('//span[contains(text(),"Ste že glasovali")]')
   ).toBeVisible();
 });
