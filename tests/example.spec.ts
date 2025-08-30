@@ -8,7 +8,7 @@ test("Oddaj glas", async ({ page }) => {
   console.log("firstTimouet:", firstTimouet);
   await page.waitForTimeout(firstTimouet);
 
-  await page.click('//a[contains(text(),"Back")]');
+  await page.click('(//a[contains(text(),"Back")])[2]');
 
   const secondTimeout = randomTimeout();
   console.log("secondTimeout:", secondTimeout);
