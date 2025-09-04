@@ -1,27 +1,27 @@
-# name: Run Playwright Script
+name: Run Playwright Script
 
-# on:
-#   schedule:
-#     - cron: "15 * * * *" # Every day at 09:00 UTC
-#   workflow_dispatch: # Allow manual trigger
+on:
+  schedule:
+    - cron: "15 * * * *" # Every day at 09:00 UTC
+  workflow_dispatch: # Allow manual trigger
 
-# jobs:
-#   run-playwright:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
+jobs:
+  run-playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: "18"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
 
-#       - name: Install dependencies
-#         run: npm install
+      - name: Install dependencies
+        run: npm install
 
-#       - name: Install Playwright browsers
-#         run: npx playwright install --with-deps
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
-#       - name: Run Playwright script
-#         run: npx playwright test example
+      - name: Run Playwright script
+        run: npx playwright test example
